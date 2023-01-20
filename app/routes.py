@@ -127,7 +127,7 @@ def create_checkout_session():
 @app.route('/success')
 @login_required
 def success():
-    send_airtime()
+    # send_airtime()
     flash('Enjoy your free airtime')
     return render_template('success.html', title='Success')
 
