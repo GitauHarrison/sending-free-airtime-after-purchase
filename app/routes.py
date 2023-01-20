@@ -100,7 +100,7 @@ def get_publishable_key():
 
 @app.route('/create-checkout-session')
 def create_checkout_session():
-    domain_url = 'http://127.0.0.1:5000/'
+    domain_url = 'https://free-airtime.onrender.com//'
     stripe.api_key = app.config['STRIPE_SECRET_KEY']
     try:
         checkout_session = stripe.checkout.Session.create(
