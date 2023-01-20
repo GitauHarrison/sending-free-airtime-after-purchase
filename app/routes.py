@@ -11,7 +11,7 @@ from app.forms import LoginForm, RegisterForm, ResetPasswordForm,\
 import africastalking
 
 def send_airtime():
-    username = "free-airtime"
+    username = app.config['AT_USERNAME']
     api_key = app.config['AFRICASTALKING_API_KEY']
 
     africastalking.initialize(username, api_key)
@@ -100,7 +100,7 @@ def get_publishable_key():
 
 @app.route('/create-checkout-session')
 def create_checkout_session():
-    domain_url = 'https://free-airtime.onrender.com/'
+    domain_url = 'http://127.0.0.1:5000/'
     stripe.api_key = app.config['STRIPE_SECRET_KEY']
     try:
         checkout_session = stripe.checkout.Session.create(

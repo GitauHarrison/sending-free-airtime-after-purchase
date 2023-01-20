@@ -20,4 +20,6 @@ class Config(object):
     STRIPE_ENDPOINT_SECRET = os.environ.get('STRIPE_ENDPOINT_SECRET')
 
     # Africa's talking API
+    # AFRICASTALKING_API_KEY = os.environ.get('AFRICASTALKING_API_KEY')
     AFRICASTALKING_API_KEY = os.environ.get('AFRICASTALKING_API_KEY')
+    AT_USERNAME = os.environ.get('AT_USERNAME')
